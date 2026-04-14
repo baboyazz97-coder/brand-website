@@ -148,4 +148,71 @@ document.addEventListener('DOMContentLoaded', () => {
   initSubscribeToggle();
   initCardAnimations();
   initNewsletter();
+  initContactModal();
+  initTestimonialColumns();
 });
+
+/* ── 후기 컬럼 무한 스크롤 ── */
+function initTestimonialColumns() {
+  document.querySelectorAll('.tcol').forEach(col => {
+    col.innerHTML += col.innerHTML; // 카드 복제 → 끊김 없는 루프
+  });
+}
+
+/* ── 문의 모달 ── */
+function initContactModal() {
+  const fabContact = document.getElementById('fabContact');
+  const contactOverlay = document.getElementById('contactOverlay');
+  const contactClose = document.getElementById('contactClose');
+  const contactForm = document.getElementById('contactForm');
+  const contactSuccess = document.getElementById('contactSuccess');
+  const contactSuccessClose = document.getElementById('contactSuccessClose');
+
+  function openModal() {
+    contactOverlay.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    const first = contactForm.querySelector('input, select, textarea');
+    if (first) first.focus();
+  }
+
+  function closeModal() {
+    contactOverlay.classList.remove('is-open');
+    document.body.style.overflow = '';
+    setTimeout(() => {
+      contactForm.reset();
+      contactForm.hidden = false;
+      contactSuccess.hidden = true;
+    }, 300);
+  }
+
+  fabContact.addEventListener('click', openModal);
+  contactClose.addEventListener('click', closeModal);
+  contactSuccessClose.addEventListener('click', closeModal);
+  contactOverlay.addEventListener('click', (e) => {
+    if (e.target === contactOverlay) closeModal();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && contactOverlay.classList.contains('is-open')) closeModal();
+  });
+
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('contactName');
+    const email = document.getElementById('contactEmail');
+    const type = document.getElementById('contactType');
+    const message = document.getElementById('contactMessage');
+    let valid = true;
+
+    [name, email, type, message].forEach(el => (el.style.borderColor = ''));
+
+    if (!name.value.trim()) { name.style.borderColor = 'var(--danger)'; valid = false; }
+    if (!email.value || !email.value.includes('@')) { email.style.borderColor = 'var(--danger)'; valid = false; }
+    if (!type.value) { type.style.borderColor = 'var(--danger)'; valid = false; }
+    if (!message.value.trim()) { message.style.borderColor = 'var(--danger)'; valid = false; }
+
+    if (!valid) return;
+
+    contactForm.hidden = true;
+    contactSuccess.hidden = false;
+  });
+}
