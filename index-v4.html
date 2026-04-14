@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="한입(HANIP) — 기능성 클린 간식 브랜드. 성분 다섯 개. 전부 발음 가능. 간식처럼 먹고 영양제처럼 챙기는 첫 번째 방법." />
+  <title>한입 HANIP — 오늘도 한입 챙겼어?</title>
+  <link rel="stylesheet" href="style-v4.css" />
+</head>
+<body>
+
+  <!-- ① 런칭 탑바 -->
+  <div class="launch-topbar" id="launchTopbar">
+    <div class="launch-topbar-inner">
+      <span>🚀 런칭 특가</span>
+      <strong>한입 조인트 100개 한정 9,900원</strong>
+      <span>· 지금 바로 →</span>
+      <a class="launch-topbar-cta" href="#subscribe">구독 시작하기</a>
+    </div>
+    <button class="launch-topbar-close" id="topbarClose" aria-label="닫기">×</button>
+  </div>
+
+  <!-- ② 헤더 -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <span class="logo-en">hanip</span>
+        <span class="logo-kr">한입 · 기능성 클린 간식</span>
+      </a>
+      <nav class="nav" id="mainNav">
+        <a href="#products" class="nav-link">제품</a>
+        <a href="#lineup"   class="nav-link">라인업</a>
+        <a href="#subscribe" class="nav-link">구독</a>
+        <a href="#story"    class="nav-link">브랜드</a>
+        <a href="#review"   class="nav-link">후기</a>
+      </nav>
+      <div class="header-actions">
+        <a href="#" class="header-cart" aria-label="장바구니">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-dot"></span>
+        </a>
+        <a href="#subscribe" class="btn btn-sm btn-primary">구독 시작하기</a>
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="메뉴" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ③ 히어로 -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <p class="hero-eyebrow">반려동물 간식의 이너뷰티</p>
+        <h1 class="hero-title">
+          오늘도<br>
+          한입<br>
+          챙겼어?
+        </h1>
+        <p class="hero-sub">
+          <strong>성분 다섯 개. 전부 발음 가능.</strong><br>
+          간식처럼 먹고 영양제처럼 챙기는 첫 번째 방법.<br>
+          맛있게 먹으면서 관절을 관리하는 기능성 소프트 츄.
+        </p>
+        <div class="hero-actions">
+          <a href="#products" class="btn btn-lg btn-dark">한입 조인트 보기 →</a>
+          <a href="#subscribe" class="btn btn-lg btn-outline">구독하면 14% 할인</a>
+        </div>
+        <div class="hero-trust">
+          <span class="hero-trust-item">소형견 관절 케어 1위</span>
+          <span class="hero-trust-item">인공 향료·색소 무첨가</span>
+          <span class="hero-trust-item">성분 5개, 끝.</span>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-product-wrap">
+          <div class="hero-product-circle">🦴</div>
+          <div class="hero-float hf-1">🐾 콩이 오늘도 한입 챙김 ✓</div>
+          <div class="hero-float hf-2">성분 5개. 전부 발음 가능.</div>
+          <div class="hero-float hf-3">🚚 당일 출고 · 전국 무료배송</div>
+          <div class="hero-float hf-4">구독하면 하루 약 500원</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ④ 고객 감정 여정 -->
+  <div class="emotion-section">
+    <div class="container">
+      <div class="emotion-grid">
+        <div class="emotion-item fade-up">
+          <p class="emotion-before">영양제 샀는데 안 먹어요</p>
+          <p class="emotion-arrow">↓ 한입이 바꿉니다</p>
+          <p class="emotion-after">"이거<br>잘 먹는다!"</p>
+          <span class="emotion-tag">불안 → 확신</span>
+        </div>
+        <div class="emotion-item fade-up" style="transition-delay:0.1s">
+          <p class="emotion-before">바쁘다고 대충 챙기는 것 같아</p>
+          <p class="emotion-arrow">↓ 한입이 바꿉니다</p>
+          <p class="emotion-after">"오늘도<br>잘 챙겼다."</p>
+          <span class="emotion-tag">죄책감 → 뿌듯함</span>
+        </div>
+        <div class="emotion-item fade-up" style="transition-delay:0.2s">
+          <p class="emotion-before">영양제 버렸어요, 또</p>
+          <p class="emotion-arrow">↓ 한입이 바꿉니다</p>
+          <p class="emotion-after">"나 꽤 괜찮은<br>집사인데?"</p>
+          <span class="emotion-tag">무력감 → 자기효능감</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ⑤ MVP 제품 — 한입 조인트 -->
+  <section class="section" id="products">
+    <div class="container mvp-inner">
+      <div class="mvp-visual">
+        <div class="mvp-circle">
+          🦴
+          <span class="mvp-line-badge">JOINT CARE</span>
+        </div>
+      </div>
+
+      <div class="mvp-info">
+        <p class="mvp-eyebrow">FOR DOG · 관절케어 · MVP 제품</p>
+        <h2 class="mvp-title">
+          산책 후 한입.<br>
+          관절은 매일 쓰니까.
+        </h2>
+        <p class="mvp-desc">
+          소형견 보호자의 가장 큰 걱정, 슬개골.<br>
+          분말이나 알약은 안 먹이잖아요.<br>
+          그래서 만들었어요. 간식처럼 주면 되는 관절 케어.
+        </p>
+
+        <div class="ingredient-list">
+          <div style="display:flex;align-items:center;gap:12px;font-size:15px;font-weight:500;">
+            <span class="ingredient-num">1</span>닭가슴살 (휴먼그레이드)
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:15px;font-weight:500;">
+            <span class="ingredient-num">2</span>글루코사민 500mg
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:15px;font-weight:500;">
+            <span class="ingredient-num">3</span>콘드로이틴
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:15px;font-weight:500;">
+            <span class="ingredient-num">4</span>비타민E
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:15px;font-weight:500;">
+            <span class="ingredient-num">5</span>식이섬유
+          </div>
+        </div>
+
+        <div class="no-add-badges">
+          <span class="no-add-badge">인공향료 <s>X</s></span>
+          <span class="no-add-badge">색소 <s>X</s></span>
+          <span class="no-add-badge">보존료 <s>X</s></span>
+          <span class="no-add-badge">부산물 <s>X</s></span>
+          <span class="no-add-badge">곡물 <s>X</s></span>
+        </div>
+
+        <div class="mvp-price-row">
+          <div>
+            <p class="mvp-price-single">단품 가격</p>
+            <p class="mvp-price-main">14,900원</p>
+          </div>
+          <p class="mvp-price-sub">
+            구독 시 <a href="#subscribe">12,900원/월</a><br>
+            첫 달 <strong style="color:var(--hb)">9,900원</strong>
+          </p>
+        </div>
+
+        <div style="display:flex;gap:12px;">
+          <a href="#subscribe" class="btn btn-xl btn-primary" style="flex:1;justify-content:center;">구독 시작하기</a>
+          <a href="#" class="btn btn-xl btn-outline">단품 구매</a>
+        </div>
+        <p style="margin-top:12px;font-size:12px;color:var(--hg);">30개입 · 1개월분 · 소형견 (3~7kg) · 하루 1~2개</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑥ 전 라인업 -->
+  <section class="section section-soft" id="lineup">
+    <div class="container">
+      <div class="section-header centered">
+        <p class="eyebrow">PRODUCT LINE</p>
+        <h2 class="section-title">한입 라인업</h2>
+        <p class="section-desc centered">
+          맛있게 먹고, 건강하게 챙기는.<br>
+          강아지 색각(블루·옐로우)을 기반으로 설계한 라인별 컬러 시스템.
+        </p>
+      </div>
+      <div class="lineup-grid">
+
+        <!-- 조인트 (출시 중) -->
+        <div class="lineup-card fade-up">
+          <div class="lineup-icon-wrap joint">🦴</div>
+          <p class="lineup-name">한입 조인트</p>
+          <p class="lineup-sub">with 글루코사민</p>
+          <p class="lineup-copy">"산책 후 한입.<br>관절은 매일 쓰니까."</p>
+          <p class="lineup-price">14,900원</p>
+        </div>
+
+        <!-- 스킨코트 (출시 예정) -->
+        <div class="lineup-card coming-soon fade-up" style="transition-delay:0.08s">
+          <span class="coming-label">출시 예정</span>
+          <div class="lineup-icon-wrap skin">🐟</div>
+          <p class="lineup-name">한입 스킨코트</p>
+          <p class="lineup-sub">with 오메가3</p>
+          <p class="lineup-copy">"윤기는 안에서부터.<br>하루 한입."</p>
+          <p class="lineup-price">14,900원</p>
+        </div>
+
+        <!-- 거트 (출시 예정) -->
+        <div class="lineup-card coming-soon fade-up" style="transition-delay:0.16s">
+          <span class="coming-label">출시 예정</span>
+          <div class="lineup-icon-wrap gut">🌿</div>
+          <p class="lineup-name">한입 거트</p>
+          <p class="lineup-sub">with 프로바이오틱스</p>
+          <p class="lineup-copy">"장이 편해야<br>하루가 편하니까."</p>
+          <p class="lineup-price">14,900원</p>
+        </div>
+
+        <!-- 카밍 (출시 예정) -->
+        <div class="lineup-card coming-soon fade-up" style="transition-delay:0.24s">
+          <span class="coming-label">출시 예정</span>
+          <div class="lineup-icon-wrap calm">🌙</div>
+          <p class="lineup-name">한입 카밍</p>
+          <p class="lineup-sub">with L-테아닌</p>
+          <p class="lineup-copy">"좀 긴장 풀어.<br>한입 먹어."</p>
+          <p class="lineup-price">14,900원</p>
+        </div>
+
+        <!-- 시니어 (출시 예정) -->
+        <div class="lineup-card coming-soon fade-up" style="transition-delay:0.32s">
+          <span class="coming-label">출시 예정</span>
+          <div class="lineup-icon-wrap senior">🌟</div>
+          <p class="lineup-name">한입 시니어</p>
+          <p class="lineup-sub">with 종합케어</p>
+          <p class="lineup-copy">"나이는 숫자일 뿐.<br>관리는 한입."</p>
+          <p class="lineup-price">14,900원</p>
+        </div>
+
+      </div>
+      <p style="text-align:center;margin-top:32px;font-size:13px;color:var(--hg);">
+        고양이 라인 (한입 헤어볼 · 유리너리 · 스킨코트 캣 · 카밍 캣 · 시니어 캣) +12개월 출시 예정
+      </p>
+    </div>
+  </section>
+
+  <!-- ⑦ 성분 투명성 (다크) -->
+  <section class="ingredient-section">
+    <p class="ingredient-big">성분 다섯 개<span class="ingredient-period">.</span></p>
+
+    <div class="ingredient-items" id="ingredientItems">
+      <div class="ingredient-step">
+        <span class="ingredient-pill">닭가슴살</span>
+        <span class="ingredient-plus">+</span>
+      </div>
+      <div class="ingredient-step">
+        <span class="ingredient-pill">글루코사민</span>
+        <span class="ingredient-plus">+</span>
+      </div>
+      <div class="ingredient-step">
+        <span class="ingredient-pill">콘드로이틴</span>
+        <span class="ingredient-plus">+</span>
+      </div>
+      <div class="ingredient-step">
+        <span class="ingredient-pill">비타민E</span>
+        <span class="ingredient-plus">+</span>
+      </div>
+      <div class="ingredient-step">
+        <span class="ingredient-pill">식이섬유</span>
+      </div>
+    </div>
+
+    <p class="ingredient-bottom">
+      <em>전부 발음 가능.</em> 나머지는 넣지 않았음.
+    </p>
+  </section>
+
+  <!-- ⑧ 구독 -->
+  <section class="subscribe-section" id="subscribe">
+    <div class="container subscribe-inner">
+      <div class="subscribe-text">
+        <p class="subscribe-eyebrow">SUBSCRIPTION</p>
+        <h2 class="subscribe-title">
+          하루 약 500원.<br>
+          커피 한 잔 값도<br>
+          안 되는 관절 관리.
+        </h2>
+        <p class="subscribe-price-frame">
+          구독하면 <strong>매달 14% 할인</strong>, 무료 배송,<br>
+          그리고 잊지 않아도 되는 편안함까지.
+        </p>
+        <div class="subscribe-benefits">
+          <span class="subscribe-benefit">전 상품 정기배송 14% 할인</span>
+          <span class="subscribe-benefit">금액 무관 무료 배송</span>
+          <span class="subscribe-benefit">품절 걱정 없이 자동 도착</span>
+          <span class="subscribe-benefit">언제든 일정 변경·해지 가능</span>
+          <span class="subscribe-benefit">첫 달 9,900원으로 체험</span>
+        </div>
+      </div>
+
+      <div class="subscribe-cards">
+        <div class="sub-card" id="subSingle">
+          <div class="sub-card-top">
+            <span class="sub-card-name">단품 구매</span>
+            <span class="sub-card-price">14,900원</span>
+          </div>
+          <p class="sub-card-desc">30개입 · 1회 배송</p>
+        </div>
+
+        <div class="sub-card selected" id="subSubscribe">
+          <span class="sub-card-popular">MOST POPULAR</span>
+          <div class="sub-card-top">
+            <span class="sub-card-name">정기구독</span>
+            <span class="sub-card-price">12,900원<span style="font-size:14px;font-weight:500;">/월</span></span>
+          </div>
+          <p class="sub-card-desc">
+            30개입 · 매달 자동 배송 ·
+            <span class="sub-card-desc-highlight">첫 달 9,900원</span>
+          </p>
+        </div>
+
+        <div class="sub-cta-area">
+          <a href="#" class="btn btn-xl btn-outline-white" style="width:100%;justify-content:center;">
+            구독 시작하기 →
+          </a>
+          <p class="sub-cta-note">언제든지 해지 가능 · 숨겨진 비용 없음</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑨ 고객 후기 + UGC -->
+  <section class="section" id="review">
+    <div class="container">
+      <div class="section-header centered">
+        <p class="eyebrow">REAL REVIEW</p>
+        <h2 class="section-title">실제 후기</h2>
+        <p class="section-desc centered">과장 없이, 실제로 먹이는 집사들의 이야기.</p>
+      </div>
+
+      <div class="review-grid">
+        <div class="review-card fade-up">
+          <div class="review-top">
+            <div class="reviewer-avatar">🧑</div>
+            <div>
+              <p class="reviewer-name">김지은</p>
+              <p class="reviewer-pet">말티즈 '콩이' · 5세</p>
+            </div>
+            <span class="review-stars">★★★★★</span>
+          </div>
+          <span class="review-product">한입 조인트</span>
+          <p class="review-body">
+            "영양제를 그렇게 사줘도 안 먹더니, 한입은 간식처럼 손에서 바로 받아먹어요.
+            3주 됐는데 산책 후에 절뚝거리는 게 좀 나아진 것 같아서 계속 먹일 예정."
+          </p>
+        </div>
+        <div class="review-card fade-up" style="transition-delay:0.1s">
+          <div class="review-top">
+            <div class="reviewer-avatar">👩</div>
+            <div>
+              <p class="reviewer-name">박민서</p>
+              <p class="reviewer-pet">포메라니안 '복숭아' · 4세</p>
+            </div>
+            <span class="review-stars">★★★★★</span>
+          </div>
+          <span class="review-product">한입 조인트</span>
+          <p class="review-body">
+            "성분 보고 구매했어요. 진짜 다섯 개밖에 없더라고요.
+            복숭아가 너무 잘 먹어서 제가 더 놀랐음. 구독으로 전환했습니다 👍"
+          </p>
+        </div>
+        <div class="review-card fade-up" style="transition-delay:0.2s">
+          <div class="review-top">
+            <div class="reviewer-avatar">👨</div>
+            <div>
+              <p class="reviewer-name">이준혁</p>
+              <p class="reviewer-pet">치와와 '하루' · 7세</p>
+            </div>
+            <span class="review-stars">★★★★★</span>
+          </div>
+          <span class="review-product">한입 조인트</span>
+          <p class="review-body">
+            "노령견이라 관절이 걱정됐는데 하루가 엄청 좋아해요.
+            하루 한입씩 주는 루틴 생겼음. 구독 신청했고 다음 달도 기다려집니다."
+          </p>
+        </div>
+      </div>
+
+      <div class="ugc-header" style="margin-top:64px;">
+        <p class="ugc-tag">#오늘도한입챙겼어</p>
+        <p style="font-size:13px;color:var(--hg);margin-top:6px;">인스타그램에서 함께하고 있어요</p>
+      </div>
+      <div class="ugc-grid">
+        <div class="ugc-cell">🐕</div>
+        <div class="ugc-cell">🦴</div>
+        <div class="ugc-cell">🐾</div>
+        <div class="ugc-cell">🐈</div>
+        <div class="ugc-cell">😊</div>
+        <div class="ugc-cell">💛</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑩ 브랜드 스토리 -->
+  <section class="story-section section-soft" id="story">
+    <div class="container story-inner">
+      <div class="story-visual">
+        <div class="story-photo">🐾</div>
+      </div>
+      <div class="story-text">
+        <p class="eyebrow">OUR STORY</p>
+        <h2 class="section-title" style="margin-bottom:8px;">거기서<br>시작됐어요.</h2>
+
+        <div class="story-quote">
+          <p>영양제를 사서 줬다. 안 먹었다.</p>
+          <p>분말을 사료에 뿌렸다. 골라 먹었다.</p>
+          <p>비싼 처방식을 샀다. 한 번 먹고 끝이었다.</p>
+          <p>그래서 생각했다.<br>
+          <strong>"간식처럼 알아서 먹는 건강 관리는 왜 없지?"</strong></p>
+          <p>한입은 거기서 시작됐다.</p>
+        </div>
+
+        <p class="story-tagline">"오늘도 잘 챙겼다."</p>
+        <p style="margin-top:8px;font-size:14px;color:var(--hg);line-height:1.75;">
+          보호자가 느끼는 작은 뿌듯함.<br>
+          그게 한입이 만드는 감정입니다.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑪ 채널 CTA -->
+  <section class="channel-section">
+    <div class="container channel-grid">
+      <div class="channel-card ch-insta">
+        <div class="ch-icon">📸</div>
+        <div class="ch-body">
+          <h3>인스타그램</h3>
+          <p>#오늘도한입챙겼어<br>집사 감성 피드</p>
+        </div>
+        <a href="#" class="ch-cta">팔로우 →</a>
+      </div>
+      <div class="channel-card ch-kakao">
+        <div class="ch-icon">💬</div>
+        <div class="ch-body">
+          <h3>카카오 채널</h3>
+          <p>런칭 소식·쿠폰을<br>가장 먼저 받아보세요</p>
+        </div>
+        <a href="#" class="ch-cta">친구추가 →</a>
+      </div>
+      <div class="channel-card ch-store">
+        <div class="ch-icon">🛒</div>
+        <div class="ch-body">
+          <h3>네이버 스마트스토어</h3>
+          <p>리뷰·포인트 적립<br>공식 스토어</p>
+        </div>
+        <a href="#" class="ch-cta">바로가기 →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 뉴스레터 -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-inner">
+        <div class="newsletter-text">
+          <h2>런칭 소식 가장 먼저</h2>
+          <p>구독 시 첫 주문 5% 추가 할인 쿠폰 즉시 지급.</p>
+        </div>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="이메일 주소를 입력해주세요" />
+          <button type="submit" class="newsletter-submit">알림 신청</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑫ 푸터 -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo" style="margin-bottom:16px;">
+          <span class="logo-en" style="color:#fff;">hanip</span>
+          <span class="logo-kr">한입 · 기능성 클린 간식</span>
+        </a>
+        <p>
+          맛있게 먹고, 건강하게 챙기는.<br>
+          반려동물과 보호자가 함께<br>더 뿌듯한 일상을 만듭니다.
+        </p>
+        <div class="footer-social">
+          <a href="#">📸</a>
+          <a href="#">💬</a>
+          <a href="#">🛒</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>PRODUCT</h5>
+          <a href="#">한입 조인트</a>
+          <a href="#">한입 스킨코트 (예정)</a>
+          <a href="#">한입 거트 (예정)</a>
+          <a href="#">한입 카밍 (예정)</a>
+          <a href="#">한입 시니어 (예정)</a>
+        </div>
+        <div class="footer-col">
+          <h5>BRAND</h5>
+          <a href="#">브랜드 스토리</a>
+          <a href="#">성분 철학</a>
+          <a href="#">구독 안내</a>
+          <a href="#">제휴·입점 문의</a>
+        </div>
+        <div class="footer-col">
+          <h5>SUPPORT</h5>
+          <a href="#">자주 묻는 질문</a>
+          <a href="#">배송 안내</a>
+          <a href="#">반품·교환</a>
+          <a href="#">1:1 문의</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 HANIP(한입). All rights reserved. | 기능성 클린 간식 D2C 브랜드</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script-v4.js"></script>
+</body>
+</html>
