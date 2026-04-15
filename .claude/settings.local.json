@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(echo \"exit: $?\")",
+      "WebFetch(domain:pethroom.com)",
+      "Bash(python3:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(grep -E \"\\\\.\\(html|js|css|json|md|txt\\)$\")"
+    ]
+  }
+}
