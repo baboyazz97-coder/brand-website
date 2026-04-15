@@ -3,481 +3,656 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>포우즈 - 반려동물 용품 전문점</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="íì(HANIP) â ê¸°ë¥ì± í´ë¦° ê°ì ë¸ëë. ì±ë¶ ë¤ì¯ ê°. ì ë¶ ë°ì ê°ë¥. ê°ìì²ë¼ ë¨¹ê³  ììì ì²ë¼ ì±ê¸°ë ì²« ë²ì§¸ ë°©ë²." />
+  <title>íì HANIP â ì¤ëë íì ì±ê²¼ì´?</title>
+  <link rel="stylesheet" href="style-v4.css" />
 </head>
 <body>
 
-  <!-- 헤더 -->
-  <header class="header">
+  <!-- â  ë°ì¹­ íë° -->
+  <div class="launch-topbar" id="launchTopbar">
+    <div class="launch-topbar-inner">
+      <span>ð ë°ì¹­ í¹ê°</span>
+      <strong>íì ì¡°ì¸í¸ 100ê° íì  9,900ì</strong>
+      <span>Â· ì§ê¸ ë°ë¡ â</span>
+      <a class="launch-topbar-cta" href="#subscribe">êµ¬ë ììíê¸°</a>
+    </div>
+    <button class="launch-topbar-close" id="topbarClose" aria-label="ë«ê¸°">Ã</button>
+  </div>
+
+  <!-- â¡ í¤ë -->
+  <header class="header" id="header">
     <div class="container header-inner">
       <a href="#" class="logo">
-        <span class="logo-icon">🐾</span>
-        <span class="logo-text">포우즈</span>
+        <span class="logo-en">hanip</span>
+        <span class="logo-kr">íì Â· ê¸°ë¥ì± í´ë¦° ê°ì</span>
       </a>
-      <nav class="nav">
-        <a href="#categories">카테고리</a>
-        <a href="#featured">인기상품</a>
-        <a href="#brands">브랜드</a>
-        <a href="#review">후기</a>
+      <nav class="nav" id="mainNav">
+        <a href="#products" class="nav-link">ì í</a>
+        <a href="#lineup"   class="nav-link">ë¼ì¸ì</a>
+        <a href="#subscribe" class="nav-link">êµ¬ë</a>
+        <a href="#story"    class="nav-link">ë¸ëë</a>
+        <a href="#review"   class="nav-link">íê¸°</a>
       </nav>
       <div class="header-actions">
-        <button class="btn-icon" aria-label="검색">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-        </button>
-        <button class="btn-icon" aria-label="찜목록">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        </button>
-        <button class="btn-icon cart-btn" aria-label="장바구니">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-          <span class="cart-badge">3</span>
-        </button>
-        <button class="btn-primary">로그인</button>
+        <a href="#" class="header-cart" aria-label="ì¥ë°êµ¬ë">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-dot"></span>
+        </a>
+        <a href="#subscribe" class="btn btn-sm btn-primary">êµ¬ë ììíê¸°</a>
       </div>
-      <button class="mobile-menu-btn" aria-label="메뉴 열기">
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="ë©ë´" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- 히어로 섹션 -->
+  <!-- â¢ íì´ë¡ -->
   <section class="hero">
     <div class="container hero-inner">
       <div class="hero-text">
-        <p class="hero-badge">신규 회원 10% 할인 쿠폰 증정</p>
-        <h1 class="hero-title">우리 아이를 위한<br>최고의 선택</h1>
-        <p class="hero-desc">강아지, 고양이부터 소동물까지<br>엄선된 프리미엄 반려동물 용품을 만나보세요.</p>
-        <div class="hero-buttons">
-          <a href="#featured" class="btn-primary btn-lg">지금 쇼핑하기</a>
-          <a href="#categories" class="btn-outline btn-lg">카테고리 보기</a>
+        <p class="hero-eyebrow">ë°ë ¤ëë¬¼ ê°ìì ì´ëë·°í°</p>
+        <h1 class="hero-title">
+          ì¤ëë<br>
+          íì<br>
+          ì±ê²¼ì´?
+        </h1>
+        <p class="hero-sub">
+          <strong>ì±ë¶ ë¤ì¯ ê°. ì ë¶ ë°ì ê°ë¥.</strong><br>
+          ê°ìì²ë¼ ë¨¹ê³  ììì ì²ë¼ ì±ê¸°ë ì²« ë²ì§¸ ë°©ë².<br>
+          ë§ìê² ë¨¹ì¼ë©´ì ê´ì ì ê´ë¦¬íë ê¸°ë¥ì± ìíí¸ ì¸.
+        </p>
+        <div class="hero-actions">
+          <a href="#products" class="btn btn-lg btn-dark">íì ì¡°ì¸í¸ ë³´ê¸° â</a>
+          <a href="#subscribe" class="btn btn-lg btn-outline">êµ¬ëíë©´ 14% í ì¸</a>
         </div>
-        <div class="hero-stats">
-          <div class="stat">
-            <strong>2만+</strong>
-            <span>상품 보유</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <strong>98%</strong>
-            <span>고객 만족도</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <strong>당일</strong>
-            <span>빠른 배송</span>
-          </div>
+        <div class="hero-trust">
+          <span class="hero-trust-item">ìíê²¬ ê´ì  ì¼ì´ 1ì</span>
+          <span class="hero-trust-item">ì¸ê³µ í¥ë£Â·ìì ë¬´ì²¨ê°</span>
+          <span class="hero-trust-item">ì±ë¶ 5ê°, ë.</span>
         </div>
       </div>
-      <div class="hero-image">
-        <div class="hero-card hero-card-main">
-          <div class="hero-pet-illustration">
-            <div class="pet-circle">
-              <span class="pet-emoji">🐶</span>
-            </div>
-            <div class="floating-badge badge-1">🦴 간식 도착!</div>
-            <div class="floating-badge badge-2">⭐ 4.9점</div>
-            <div class="floating-badge badge-3">🚚 무료 배송</div>
-          </div>
+
+      <div class="hero-visual">
+        <div class="hero-product-wrap">
+          <div class="hero-product-circle">ð¦´</div>
+          <div class="hero-float hf-1">ð¾ ì½©ì´ ì¤ëë íì ì±ê¹ â</div>
+          <div class="hero-float hf-2">ì±ë¶ 5ê°. ì ë¶ ë°ì ê°ë¥.</div>
+          <div class="hero-float hf-3">ð ë¹ì¼ ì¶ê³  Â· ì êµ­ ë¬´ë£ë°°ì¡</div>
+          <div class="hero-float hf-4">êµ¬ëíë©´ íë£¨ ì½ 500ì</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 배너 띠 -->
-  <div class="banner-strip">
-    <div class="banner-track">
-      <span>🚚 3만원 이상 무료 배송</span>
-      <span>🎁 신규 회원 10% 쿠폰</span>
-      <span>⭐ 적립금 최대 5% 적립</span>
-      <span>📦 당일 오후 2시 이전 주문 당일 출고</span>
-      <span>🔄 30일 이내 무료 반품</span>
-      <span>🚚 3만원 이상 무료 배송</span>
-      <span>🎁 신규 회원 10% 쿠폰</span>
-      <span>⭐ 적립금 최대 5% 적립</span>
-      <span>📦 당일 오후 2시 이전 주문 당일 출고</span>
-      <span>🔄 30일 이내 무료 반품</span>
+  <!-- â£ ê³ ê° ê°ì  ì¬ì  -->
+  <div class="emotion-section">
+    <div class="container">
+      <div class="emotion-grid">
+        <div class="emotion-item fade-up">
+          <p class="emotion-before">ììì  ìëë° ì ë¨¹ì´ì</p>
+          <p class="emotion-arrow">â íìì´ ë°ê¿ëë¤</p>
+          <p class="emotion-after">"ì´ê±°<br>ì ë¨¹ëë¤!"</p>
+          <span class="emotion-tag">ë¶ì â íì </span>
+        </div>
+        <div class="emotion-item fade-up" style="transition-delay:0.1s">
+          <p class="emotion-before">ë°ìë¤ê³  ëì¶© ì±ê¸°ë ê² ê°ì</p>
+          <p class="emotion-arrow">â íìì´ ë°ê¿ëë¤</p>
+          <p class="emotion-after">"ì¤ëë<br>ì ì±ê²¼ë¤."</p>
+          <span class="emotion-tag">ì£ì±ê° â ë¿ë¯í¨</span>
+        </div>
+        <div class="emotion-item fade-up" style="transition-delay:0.2s">
+          <p class="emotion-before">ììì  ë²ë ¸ì´ì, ë</p>
+          <p class="emotion-arrow">â íìì´ ë°ê¿ëë¤</p>
+          <p class="emotion-after">"ë ê½¤ ê´ì°®ì<br>ì§ì¬ì¸ë°?"</p>
+          <span class="emotion-tag">ë¬´ë ¥ê° â ìê¸°í¨ë¥ê°</span>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- 카테고리 -->
-  <section class="section" id="categories">
+  <!-- â¤ MVP ì í â íì ì¡°ì¸í¸ -->
+  <section class="section" id="products">
+    <div class="container mvp-inner">
+      <div class="mvp-visual">
+        <div class="mvp-circle">
+          ð¦´
+          <span class="mvp-line-badge">JOINT CARE</span>
+        </div>
+      </div>
+
+      <div class="mvp-info">
+        <p class="mvp-eyebrow">FOR DOG Â· ê´ì ì¼ì´ Â· MVP ì í</p>
+        <h2 class="mvp-title">
+          ì°ì± í íì.<br>
+          ê´ì ì ë§¤ì¼ ì°ëê¹.
+        </h2>
+        <p class="mvp-desc">
+          ìíê²¬ ë³´í¸ìì ê°ì¥ í° ê±±ì , ì¬ê°ê³¨.<br>
+          ë¶ë§ì´ë ìì½ì ì ë¨¹ì´ììì.<br>
+          ê·¸ëì ë§ë¤ìì´ì. ê°ìì²ë¼ ì£¼ë©´ ëë ê´ì  ì¼ì´.
+        </p>
+
+        <div class="ingredient-list">
+          <div style="display:flex;align-items:center;gap:12px;font-size:15px;font-weight:500;">
+            <span class="ingredient-num">1</span>ë­ê°ì´ì´ (í´ë¨¼ê·¸ë ì´ë)
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:15px;font-weight:500;">
+            <span class="ingredient-num">2</span>ê¸ë£¨ì½ì¬ë¯¼ 500mg
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:15px;font-weight:500;">
+            <span class="ingredient-num">3</span>ì½ëë¡ì´í´
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:15px;font-weight:500;">
+            <span class="ingredient-num">4</span>ë¹íë¯¼E
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:15px;font-weight:500;">
+            <span class="ingredient-num">5</span>ìì´ì¬ì 
+          </div>
+        </div>
+
+        <div class="no-add-badges">
+          <span class="no-add-badge">ì¸ê³µí¥ë£ <s>X</s></span>
+          <span class="no-add-badge">ìì <s>X</s></span>
+          <span class="no-add-badge">ë³´ì¡´ë£ <s>X</s></span>
+          <span class="no-add-badge">ë¶ì°ë¬¼ <s>X</s></span>
+          <span class="no-add-badge">ê³¡ë¬¼ <s>X</s></span>
+        </div>
+
+        <div class="mvp-price-row">
+          <div>
+            <p class="mvp-price-single">ë¨í ê°ê²©</p>
+            <p class="mvp-price-main">14,900ì</p>
+          </div>
+          <p class="mvp-price-sub">
+            êµ¬ë ì <a href="#subscribe">12,900ì/ì</a><br>
+            ì²« ë¬ <strong style="color:var(--hb)">9,900ì</strong>
+          </p>
+        </div>
+
+        <div style="display:flex;gap:12px;">
+          <a href="#subscribe" class="btn btn-xl btn-primary" style="flex:1;justify-content:center;">êµ¬ë ììíê¸°</a>
+          <a href="#" class="btn btn-xl btn-outline">ë¨í êµ¬ë§¤</a>
+        </div>
+        <p style="margin-top:12px;font-size:12px;color:var(--hg);">30ê°ì Â· 1ê°ìë¶ Â· ìíê²¬ (3~7kg) Â· íë£¨ 1~2ê°</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- â¥ ì  ë¼ì¸ì -->
+  <section class="section section-soft" id="lineup">
     <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">카테고리</h2>
-        <p class="section-desc">우리 아이에게 필요한 모든 것</p>
+      <div class="section-header centered">
+        <p class="eyebrow">PRODUCT LINE</p>
+        <h2 class="section-title">íì ë¼ì¸ì</h2>
+        <p class="section-desc centered">
+          ë§ìê² ë¨¹ê³ , ê±´ê°íê² ì±ê¸°ë.<br>
+          ê°ìì§ ìê°(ë¸ë£¨Â·ìë¡ì°)ì ê¸°ë°ì¼ë¡ ì¤ê³í ë¼ì¸ë³ ì»¬ë¬ ìì¤í.
+        </p>
       </div>
-      <div class="category-grid">
-        <a href="#" class="category-card">
-          <div class="category-icon" style="background:#FFF3E0;">🐕</div>
-          <span>강아지</span>
-        </a>
-        <a href="#" class="category-card">
-          <div class="category-icon" style="background:#F3E5F5;">🐈</div>
-          <span>고양이</span>
-        </a>
-        <a href="#" class="category-card">
-          <div class="category-icon" style="background:#E8F5E9;">🐹</div>
-          <span>소동물</span>
-        </a>
-        <a href="#" class="category-card">
-          <div class="category-icon" style="background:#E3F2FD;">🐟</div>
-          <span>물고기</span>
-        </a>
-        <a href="#" class="category-card">
-          <div class="category-icon" style="background:#FCE4EC;">🦜</div>
-          <span>조류</span>
-        </a>
-        <a href="#" class="category-card">
-          <div class="category-icon" style="background:#E0F7FA;">🦎</div>
-          <span>파충류</span>
-        </a>
-        <a href="#" class="category-card">
-          <div class="category-icon" style="background:#FFF8E1;">🍖</div>
-          <span>사료·간식</span>
-        </a>
-        <a href="#" class="category-card">
-          <div class="category-icon" style="background:#F1F8E9;">💊</div>
-          <span>건강·위생</span>
-        </a>
+      <div class="lineup-grid">
+
+        <!-- ì¡°ì¸í¸ (ì¶ì ì¤) -->
+        <div class="lineup-card fade-up">
+          <div class="lineup-icon-wrap joint">ð¦´</div>
+          <p class="lineup-name">íì ì¡°ì¸í¸</p>
+          <p class="lineup-sub">with ê¸ë£¨ì½ì¬ë¯¼</p>
+          <p class="lineup-copy">"ì°ì± í íì.<br>ê´ì ì ë§¤ì¼ ì°ëê¹."</p>
+          <p class="lineup-price">14,900ì</p>
+        </div>
+
+        <!-- ì¤í¨ì½í¸ (ì¶ì ìì ) -->
+        <div class="lineup-card coming-soon fade-up" style="transition-delay:0.08s">
+          <span class="coming-label">ì¶ì ìì </span>
+          <div class="lineup-icon-wrap skin">ð</div>
+          <p class="lineup-name">íì ì¤í¨ì½í¸</p>
+          <p class="lineup-sub">with ì¤ë©ê°3</p>
+          <p class="lineup-copy">"ì¤ê¸°ë ìììë¶í°.<br>íë£¨ íì."</p>
+          <p class="lineup-price">14,900ì</p>
+        </div>
+
+        <!-- ê±°í¸ (ì¶ì ìì ) -->
+        <div class="lineup-card coming-soon fade-up" style="transition-delay:0.16s">
+          <span class="coming-label">ì¶ì ìì </span>
+          <div class="lineup-icon-wrap gut">ð¿</div>
+          <p class="lineup-name">íì ê±°í¸</p>
+          <p class="lineup-sub">with íë¡ë°ì´ì¤í±ì¤</p>
+          <p class="lineup-copy">"ì¥ì´ í¸í´ì¼<br>íë£¨ê° í¸íëê¹."</p>
+          <p class="lineup-price">14,900ì</p>
+        </div>
+
+        <!-- ì¹´ë° (ì¶ì ìì ) -->
+        <div class="lineup-card coming-soon fade-up" style="transition-delay:0.24s">
+          <span class="coming-label">ì¶ì ìì </span>
+          <div class="lineup-icon-wrap calm">ð</div>
+          <p class="lineup-name">íì ì¹´ë°</p>
+          <p class="lineup-sub">with L-íìë</p>
+          <p class="lineup-copy">"ì¢ ê¸´ì¥ íì´.<br>íì ë¨¹ì´."</p>
+          <p class="lineup-price">14,900ì</p>
+        </div>
+
+        <!-- ìëì´ (ì¶ì ìì ) -->
+        <div class="lineup-card coming-soon fade-up" style="transition-delay:0.32s">
+          <span class="coming-label">ì¶ì ìì </span>
+          <div class="lineup-icon-wrap senior">ð</div>
+          <p class="lineup-name">íì ìëì´</p>
+          <p class="lineup-sub">with ì¢í©ì¼ì´</p>
+          <p class="lineup-copy">"ëì´ë ì«ìì¼ ë¿.<br>ê´ë¦¬ë íì."</p>
+          <p class="lineup-price">14,900ì</p>
+        </div>
+
+      </div>
+      <p style="text-align:center;margin-top:32px;font-size:13px;color:var(--hg);">
+        ê³ ìì´ ë¼ì¸ (íì í¤ì´ë³¼ Â· ì ë¦¬ëë¦¬ Â· ì¤í¨ì½í¸ ìº£ Â· ì¹´ë° ìº£ Â· ìëì´ ìº£) +12ê°ì ì¶ì ìì 
+      </p>
+    </div>
+  </section>
+
+  <!-- â¦ ì±ë¶ í¬ëªì± (ë¤í¬) -->
+  <section class="ingredient-section">
+    <p class="ingredient-big">ì±ë¶ ë¤ì¯ ê°<span class="ingredient-period">.</span></p>
+
+    <div class="ingredient-items" id="ingredientItems">
+      <div class="ingredient-step">
+        <span class="ingredient-pill">ë­ê°ì´ì´</span>
+        <span class="ingredient-plus">+</span>
+      </div>
+      <div class="ingredient-step">
+        <span class="ingredient-pill">ê¸ë£¨ì½ì¬ë¯¼</span>
+        <span class="ingredient-plus">+</span>
+      </div>
+      <div class="ingredient-step">
+        <span class="ingredient-pill">ì½ëë¡ì´í´</span>
+        <span class="ingredient-plus">+</span>
+      </div>
+      <div class="ingredient-step">
+        <span class="ingredient-pill">ë¹íë¯¼E</span>
+        <span class="ingredient-plus">+</span>
+      </div>
+      <div class="ingredient-step">
+        <span class="ingredient-pill">ìì´ì¬ì </span>
+      </div>
+    </div>
+
+    <p class="ingredient-bottom">
+      <em>ì ë¶ ë°ì ê°ë¥.</em> ëë¨¸ì§ë ë£ì§ ììì.
+    </p>
+  </section>
+
+  <!-- â§ êµ¬ë -->
+  <section class="subscribe-section" id="subscribe">
+    <div class="container subscribe-inner">
+      <div class="subscribe-text">
+        <p class="subscribe-eyebrow">SUBSCRIPTION</p>
+        <h2 class="subscribe-title">
+          íë£¨ ì½ 500ì.<br>
+          ì»¤í¼ í ì ê°ë<br>
+          ì ëë ê´ì  ê´ë¦¬.
+        </h2>
+        <p class="subscribe-price-frame">
+          êµ¬ëíë©´ <strong>ë§¤ë¬ 14% í ì¸</strong>, ë¬´ë£ ë°°ì¡,<br>
+          ê·¸ë¦¬ê³  ìì§ ììë ëë í¸ìí¨ê¹ì§.
+        </p>
+        <div class="subscribe-benefits">
+          <span class="subscribe-benefit">ì  ìí ì ê¸°ë°°ì¡ 14% í ì¸</span>
+          <span class="subscribe-benefit">ê¸ì¡ ë¬´ê´ ë¬´ë£ ë°°ì¡</span>
+          <span class="subscribe-benefit">íì  ê±±ì  ìì´ ìë ëì°©</span>
+          <span class="subscribe-benefit">ì¸ì ë  ì¼ì  ë³ê²½Â·í´ì§ ê°ë¥</span>
+          <span class="subscribe-benefit">ì²« ë¬ 9,900ìì¼ë¡ ì²´í</span>
+        </div>
+      </div>
+
+      <div class="subscribe-cards">
+        <div class="sub-card" id="subSingle">
+          <div class="sub-card-top">
+            <span class="sub-card-name">ë¨í êµ¬ë§¤</span>
+            <span class="sub-card-price">14,900ì</span>
+          </div>
+          <p class="sub-card-desc">30ê°ì Â· 1í ë°°ì¡</p>
+        </div>
+
+        <div class="sub-card selected" id="subSubscribe">
+          <span class="sub-card-popular">MOST POPULAR</span>
+          <div class="sub-card-top">
+            <span class="sub-card-name">ì ê¸°êµ¬ë</span>
+            <span class="sub-card-price">12,900ì<span style="font-size:14px;font-weight:500;">/ì</span></span>
+          </div>
+          <p class="sub-card-desc">
+            30ê°ì Â· ë§¤ë¬ ìë ë°°ì¡ Â·
+            <span class="sub-card-desc-highlight">ì²« ë¬ 9,900ì</span>
+          </p>
+        </div>
+
+        <div class="sub-cta-area">
+          <a href="#" class="btn btn-xl btn-outline-white" style="width:100%;justify-content:center;">
+            êµ¬ë ììíê¸° â
+          </a>
+          <p class="sub-cta-note">ì¸ì ë ì§ í´ì§ ê°ë¥ Â· ì¨ê²¨ì§ ë¹ì© ìì</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 인기 상품 -->
-  <section class="section section-gray" id="featured">
+  <!-- â¨ ê³ ê° íê¸° + UGC -->
+  <section class="section" id="review">
     <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">인기 상품</h2>
-        <p class="section-desc">지금 가장 많이 찾는 상품들</p>
+      <div class="section-header centered">
+        <p class="eyebrow">REAL REVIEW</p>
+        <h2 class="section-title">ì¤ì  íê¸°</h2>
+        <p class="section-desc centered">ê³¼ì¥ ìì´, ì¤ì ë¡ ë¨¹ì´ë ì§ì¬ë¤ì ì´ì¼ê¸°.</p>
       </div>
-      <div class="tab-bar">
-        <button class="tab active" data-tab="all">전체</button>
-        <button class="tab" data-tab="dog">강아지</button>
-        <button class="tab" data-tab="cat">고양이</button>
-        <button class="tab" data-tab="small">소동물</button>
+
+      <div class="testimonial-columns">
+        <!-- ì»¬ë¼ 1 -->
+        <div class="tcol tcol-1">
+          <div class="review-card">
+            <div class="review-top">
+              <div class="reviewer-avatar">ð§</div>
+              <div>
+                <p class="reviewer-name">ê¹ì§ì</p>
+                <p class="reviewer-pet">ë§í°ì¦ 'ì½©ì´' Â· 5ì¸</p>
+              </div>
+              <span class="review-stars">âââââ</span>
+            </div>
+            <span class="review-product">íì ì¡°ì¸í¸</span>
+            <p class="review-body">"ììì ë¥¼ ê·¸ë ê² ì¬ì¤ë ì ë¨¹ëë, íìì ê°ìì²ë¼ ììì ë°ë¡ ë°ìë¨¹ì´ì. 3ì£¼ ëëë° ì°ì± íì ì ëê±°ë¦¬ë ê² ì¢ ëìì§ ê² ê°ìì ê³ì ë¨¹ì¼ ìì ."</p>
+          </div>
+          <div class="review-card">
+            <div class="review-top">
+              <div class="reviewer-avatar">ð©</div>
+              <div>
+                <p class="reviewer-name">ë°ë¯¼ì</p>
+                <p class="reviewer-pet">í¬ë©ë¼ëì 'ë³µì­ì' Â· 4ì¸</p>
+              </div>
+              <span class="review-stars">âââââ</span>
+            </div>
+            <span class="review-product">íì ì¡°ì¸í¸</span>
+            <p class="review-body">"ì±ë¶ ë³´ê³  êµ¬ë§¤íì´ì. ì§ì§ ë¤ì¯ ê°ë°ì ìëë¼ê³ ì. ë³µì­ìê° ëë¬´ ì ë¨¹ì´ì ì ê° ë ëëì. êµ¬ëì¼ë¡ ì ííìµëë¤ ð"</p>
+          </div>
+          <div class="review-card">
+            <div class="review-top">
+              <div class="reviewer-avatar">ð¨</div>
+              <div>
+                <p class="reviewer-name">ì´ì¤í</p>
+                <p class="reviewer-pet">ì¹ìì 'íë£¨' Â· 7ì¸</p>
+              </div>
+              <span class="review-stars">âââââ</span>
+            </div>
+            <span class="review-product">íì ì¡°ì¸í¸</span>
+            <p class="review-body">"ë¸ë ¹ê²¬ì´ë¼ ê´ì ì´ ê±±ì ëëë° íë£¨ê° ìì²­ ì¢ìí´ì. íë£¨ íìì© ì£¼ë ë£¨í´ ìê²¼ì. êµ¬ë ì ì²­íê³  ë¤ì ë¬ë ê¸°ë¤ë ¤ì§ëë¤."</p>
+          </div>
+        </div>
+
+        <!-- ì»¬ë¼ 2 -->
+        <div class="tcol tcol-2">
+          <div class="review-card">
+            <div class="review-top">
+              <div class="reviewer-avatar">ð©</div>
+              <div>
+                <p class="reviewer-name">ìµìì</p>
+                <p class="reviewer-pet">ë¹ìíë¦¬ì  'ìì´' Â· 3ì¸</p>
+              </div>
+              <span class="review-stars">âââââ</span>
+            </div>
+            <span class="review-product">íì ì¡°ì¸í¸</span>
+            <p class="review-body">"ì²ìì ë°ì ë°ìíëë° 2ì£¼ì°¨ë¶í° íì¤í ë¤ë¥´ëë¼ê³ ì. ìì´ê° ê³ë¨ ì¤ë¥¼ ë ë íë¤ì´í´ì. ì±ë¶ì´ ì§ì§ ê¹ëí´ì ë¯¿ê³  ë¨¹ì¼ ì ìì´ì."</p>
+          </div>
+          <div class="review-card">
+            <div class="review-top">
+              <div class="reviewer-avatar">ð­</div>
+              <div>
+                <p class="reviewer-name">ì ëì¤</p>
+                <p class="reviewer-pet">ë¥ì¤íí¸ 'ìì´' Â· 6ì¸</p>
+              </div>
+              <span class="review-stars">âââââ</span>
+            </div>
+            <span class="review-product">íì ì¡°ì¸í¸</span>
+            <p class="review-body">"ë¥ì¤íí¸ë íë¦¬ ê´ë¦¬ê° íìì¸ë°, ì±ë¶ ë³´ê³  ë°ë¡ êµ¬ë§¤íì´ì. ìì´ê° ë§ìê² ì ë¨¹ê³ , ì ë ë§ìì´ íê²° í¸í´ì¡ìµëë¤."</p>
+          </div>
+          <div class="review-card">
+            <div class="review-top">
+              <div class="reviewer-avatar">ð</div>
+              <div>
+                <p class="reviewer-name">íì ì§</p>
+                <p class="reviewer-pet">ê³¨ë ë¦¬í¸ë¦¬ë² 'ë²ë' Â· 2ì¸</p>
+              </div>
+              <span class="review-stars">âââââ</span>
+            </div>
+            <span class="review-product">íì ì¡°ì¸í¸</span>
+            <p class="review-body">"ëíê²¬ì´ë¼ ê°ìë ì±ë¶ ë°ì§ê² ë¼ì. íìì ë¶íìí ê² ìì´ì ì¢ìì. ë²ëê° ê°ì íìì ê¸°ë¤ë¦¬ë íì ì´ ë¬ë¼ì¡ì´ì ð¾"</p>
+          </div>
+        </div>
+
+        <!-- ì»¬ë¼ 3 -->
+        <div class="tcol tcol-3">
+          <div class="review-card">
+            <div class="review-top">
+              <div class="reviewer-avatar">ð¾</div>
+              <div>
+                <p class="reviewer-name">ì¤ì¬ì</p>
+                <p class="reviewer-pet">ìì¸ 'ë§ë£¨' Â· 8ì¸</p>
+              </div>
+              <span class="review-stars">âââââ</span>
+            </div>
+            <span class="review-product">íì ì¡°ì¸í¸</span>
+            <p class="review-body">"8ì´ ë§ë£¨ê° ìì¦ ë¤ì ë°ì´ë¤ëë ê² ê°ìì. ê³¼ì¥ì´ ìëë¼ ì§ì§ë¡ì. ììì¬ ì ìëë ì¢ì ì±ë¶ì´ë¼ê³  íìì ìì¬íê³  ê³ì ì¤ ê±°ìì."</p>
+          </div>
+          <div class="review-card">
+            <div class="review-top">
+              <div class="reviewer-avatar">ð¸</div>
+              <div>
+                <p class="reviewer-name">ìì§í</p>
+                <p class="reviewer-pet">ë§í°ì¦ 'ë´ì´' Â· 4ì¸</p>
+              </div>
+              <span class="review-stars">âââââ</span>
+            </div>
+            <span class="review-product">íì ì¡°ì¸í¸</span>
+            <p class="review-body">"ë¸ëë ì¤í ë¦¬ ì½ê³  ì ë¢°ê° ìê²¼ì´ì. ê°ê²©ë ë©ëëê³ ì. ë´ì´ê° ì ë¨¹ì¼ëê¹ ì ë ë§¤ë¬ ì±ê²¨ì£¼ë ì¬ë¯¸ê° ìê²¼ìµëë¤. êµ¬ë ì¶ì²í´ì!"</p>
+          </div>
+          <div class="review-card">
+            <div class="review-top">
+              <div class="reviewer-avatar">â­</div>
+              <div>
+                <p class="reviewer-name">ê°íì</p>
+                <p class="reviewer-pet">í¬ë©ë¼ëì 'ë³ì´' Â· 5ì¸</p>
+              </div>
+              <span class="review-stars">âââââ</span>
+            </div>
+            <span class="review-product">íì ì¡°ì¸í¸</span>
+            <p class="review-body">"SNSìì ë³´ê³  ë°ì ë°ìíëë° ì§ì  ì¨ë³´ë ë¬ë¼ì. ë³ì´ê° ë¨¹ìë§ì ë°ì´ì¤ë ê±° ë³´ë©´ ì§ì§ ë§ìëë´ì. ì±ë¶ë ê¹ëíê³  ì¬êµ¬ë§¤ íì ìëë¤."</p>
+          </div>
+        </div>
       </div>
-      <div class="product-grid">
 
-        <div class="product-card">
-          <div class="product-image" style="background:#FFF3E0;">
-            <span class="product-emoji">🦴</span>
-            <button class="wish-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
-            <span class="product-badge badge-sale">15% 할인</span>
-          </div>
-          <div class="product-info">
-            <p class="product-brand">내추럴코어</p>
-            <h3 class="product-name">유기농 치킨 져키 250g</h3>
-            <div class="product-rating">
-              <span class="stars">★★★★★</span>
-              <span class="rating-count">(1,248)</span>
-            </div>
-            <div class="product-price">
-              <span class="price-original">18,000원</span>
-              <span class="price-current">15,300원</span>
-            </div>
-            <button class="btn-cart">장바구니 담기</button>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image" style="background:#E8F5E9;">
-            <span class="product-emoji">🛏️</span>
-            <button class="wish-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
-            <span class="product-badge badge-new">NEW</span>
-          </div>
-          <div class="product-info">
-            <p class="product-brand">퍼피라이프</p>
-            <h3 class="product-name">메모리폼 반려동물 침대 M</h3>
-            <div class="product-rating">
-              <span class="stars">★★★★☆</span>
-              <span class="rating-count">(856)</span>
-            </div>
-            <div class="product-price">
-              <span class="price-current">49,800원</span>
-            </div>
-            <button class="btn-cart">장바구니 담기</button>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image" style="background:#F3E5F5;">
-            <span class="product-emoji">🎣</span>
-            <button class="wish-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
-            <span class="product-badge badge-best">BEST</span>
-          </div>
-          <div class="product-info">
-            <p class="product-brand">캣타임</p>
-            <h3 class="product-name">깃털 낚시대 고양이 장난감</h3>
-            <div class="product-rating">
-              <span class="stars">★★★★★</span>
-              <span class="rating-count">(2,104)</span>
-            </div>
-            <div class="product-price">
-              <span class="price-original">12,000원</span>
-              <span class="price-current">9,600원</span>
-            </div>
-            <button class="btn-cart">장바구니 담기</button>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image" style="background:#E3F2FD;">
-            <span class="product-emoji">🍽️</span>
-            <button class="wish-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
-          </div>
-          <div class="product-info">
-            <p class="product-brand">스마트펫</p>
-            <h3 class="product-name">자동 급수기 2.5L 스테인리스</h3>
-            <div class="product-rating">
-              <span class="stars">★★★★☆</span>
-              <span class="rating-count">(632)</span>
-            </div>
-            <div class="product-price">
-              <span class="price-current">38,500원</span>
-            </div>
-            <button class="btn-cart">장바구니 담기</button>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image" style="background:#FCE4EC;">
-            <span class="product-emoji">🧴</span>
-            <button class="wish-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
-            <span class="product-badge badge-sale">20% 할인</span>
-          </div>
-          <div class="product-info">
-            <p class="product-brand">그루밍랩</p>
-            <h3 class="product-name">저자극 펫 샴푸 500ml</h3>
-            <div class="product-rating">
-              <span class="stars">★★★★★</span>
-              <span class="rating-count">(978)</span>
-            </div>
-            <div class="product-price">
-              <span class="price-original">22,000원</span>
-              <span class="price-current">17,600원</span>
-            </div>
-            <button class="btn-cart">장바구니 담기</button>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-image" style="background:#FFF8E1;">
-            <span class="product-emoji">🎒</span>
-            <button class="wish-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
-            <span class="product-badge badge-new">NEW</span>
-          </div>
-          <div class="product-info">
-            <p class="product-brand">트래블펫</p>
-            <h3 class="product-name">항공사 승인 반려동물 이동가방</h3>
-            <div class="product-rating">
-              <span class="stars">★★★★☆</span>
-              <span class="rating-count">(411)</span>
-            </div>
-            <div class="product-price">
-              <span class="price-current">89,000원</span>
-            </div>
-            <button class="btn-cart">장바구니 담기</button>
-          </div>
-        </div>
-
+      <div class="ugc-header" style="margin-top:64px;">
+        <p class="ugc-tag">#ì¤ëëíìì±ê²¼ì´</p>
+        <p style="font-size:13px;color:var(--hg);margin-top:6px;">ì¸ì¤íê·¸ë¨ìì í¨ê»íê³  ìì´ì</p>
       </div>
-      <div class="center-btn">
-        <a href="#" class="btn-outline btn-lg">상품 더보기</a>
+      <div class="ugc-grid">
+        <div class="ugc-cell">ð</div>
+        <div class="ugc-cell">ð¦´</div>
+        <div class="ugc-cell">ð¾</div>
+        <div class="ugc-cell">ð</div>
+        <div class="ugc-cell">ð</div>
+        <div class="ugc-cell">ð</div>
       </div>
     </div>
   </section>
 
-  <!-- 프로모션 배너 -->
-  <section class="promo-section">
-    <div class="container promo-grid">
-      <div class="promo-card promo-card-large" style="background: linear-gradient(135deg, #FF6B6B, #FF8E53);">
-        <div class="promo-text">
-          <span class="promo-label">이번 주 특가</span>
-          <h3>사료 전품목<br><strong>최대 30% 할인</strong></h3>
-          <a href="#" class="btn-white">바로가기</a>
-        </div>
-        <span class="promo-emoji">🐾</span>
+  <!-- â© ë¸ëë ì¤í ë¦¬ -->
+  <section class="story-section section-soft" id="story">
+    <div class="container story-inner">
+      <div class="story-visual">
+        <div class="story-photo">ð¾</div>
       </div>
-      <div class="promo-card" style="background: linear-gradient(135deg, #667eea, #764ba2);">
-        <div class="promo-text">
-          <span class="promo-label">신상품</span>
-          <h3>여름 케어<br><strong>신규 입고</strong></h3>
-          <a href="#" class="btn-white">바로가기</a>
+      <div class="story-text">
+        <p class="eyebrow">OUR STORY</p>
+        <h2 class="section-title" style="margin-bottom:8px;">ê±°ê¸°ì<br>ììëì´ì.</h2>
+
+        <div class="story-quote">
+          <p>ììì ë¥¼ ì¬ì ì¤¬ë¤. ì ë¨¹ìë¤.</p>
+          <p>ë¶ë§ì ì¬ë£ì ë¿ë ¸ë¤. ê³¨ë¼ ë¨¹ìë¤.</p>
+          <p>ë¹ì¼ ì²ë°©ìì ìë¤. í ë² ë¨¹ê³  ëì´ìë¤.</p>
+          <p>ê·¸ëì ìê°íë¤.<br>
+          <strong>"ê°ìì²ë¼ ììì ë¨¹ë ê±´ê° ê´ë¦¬ë ì ìì§?"</strong></p>
+          <p>íìì ê±°ê¸°ì ììëë¤.</p>
         </div>
-        <span class="promo-emoji">🌊</span>
-      </div>
-      <div class="promo-card" style="background: linear-gradient(135deg, #11998e, #38ef7d);">
-        <div class="promo-text">
-          <span class="promo-label">회원 전용</span>
-          <h3>웰컴 쿠폰<br><strong>10% 즉시 할인</strong></h3>
-          <a href="#" class="btn-white">회원가입</a>
-        </div>
-        <span class="promo-emoji">🎁</span>
+
+        <p class="story-tagline">"ì¤ëë ì ì±ê²¼ë¤."</p>
+        <p style="margin-top:8px;font-size:14px;color:var(--hg);line-height:1.75;">
+          ë³´í¸ìê° ëë¼ë ìì ë¿ë¯í¨.<br>
+          ê·¸ê² íìì´ ë§ëë ê°ì ìëë¤.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- 브랜드 -->
-  <section class="section" id="brands">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">공식 입점 브랜드</h2>
-        <p class="section-desc">믿을 수 있는 브랜드만 엄선했습니다</p>
+  <!-- âª ì±ë CTA -->
+  <section class="channel-section">
+    <div class="container channel-grid">
+      <div class="channel-card ch-insta">
+        <div class="ch-icon">ð¸</div>
+        <div class="ch-body">
+          <h3>ì¸ì¤íê·¸ë¨</h3>
+          <p>#ì¤ëëíìì±ê²¼ì´<br>ì§ì¬ ê°ì± í¼ë</p>
+        </div>
+        <a href="#" class="ch-cta">íë¡ì° â</a>
       </div>
-      <div class="brand-list">
-        <div class="brand-logo">내추럴코어</div>
-        <div class="brand-logo">로얄캐닌</div>
-        <div class="brand-logo">힐스</div>
-        <div class="brand-logo">퍼피라이프</div>
-        <div class="brand-logo">캣타임</div>
-        <div class="brand-logo">그루밍랩</div>
+      <div class="channel-card ch-kakao">
+        <div class="ch-icon">ð¬</div>
+        <div class="ch-body">
+          <h3>ì¹´ì¹´ì¤ ì±ë</h3>
+          <p>ë°ì¹­ ììÂ·ì¿ í°ì<br>ê°ì¥ ë¨¼ì  ë°ìë³´ì¸ì</p>
+        </div>
+        <a href="#" class="ch-cta">ì¹êµ¬ì¶ê° â</a>
+      </div>
+      <div class="channel-card ch-store">
+        <div class="ch-icon">ð</div>
+        <div class="ch-body">
+          <h3>ë¤ì´ë² ì¤ë§í¸ì¤í ì´</h3>
+          <p>ë¦¬ë·°Â·í¬ì¸í¸ ì ë¦½<br>ê³µì ì¤í ì´</p>
+        </div>
+        <a href="#" class="ch-cta">ë°ë¡ê°ê¸° â</a>
       </div>
     </div>
   </section>
 
-  <!-- 고객 후기 -->
-  <section class="section section-gray" id="review">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">고객 후기</h2>
-        <p class="section-desc">실제 구매 고객들의 생생한 후기</p>
-      </div>
-      <div class="review-grid">
-        <div class="review-card">
-          <div class="review-header">
-            <div class="reviewer-avatar">🧑</div>
-            <div>
-              <p class="reviewer-name">김*현</p>
-              <span class="stars small">★★★★★</span>
-            </div>
-            <span class="review-product">유기농 치킨 져키</span>
-          </div>
-          <p class="review-text">"저희 강아지가 정말 좋아해요! 성분도 깨끗하고 냄새도 좋아서 간식 시간마다 신이 나서 달려와요. 재구매 의사 100%입니다."</p>
-          <div class="review-images">
-            <div class="review-img" style="background:#FFF3E0;">🐕</div>
-            <div class="review-img" style="background:#FFF3E0;">🦴</div>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="review-header">
-            <div class="reviewer-avatar">👩</div>
-            <div>
-              <p class="reviewer-name">이*진</p>
-              <span class="stars small">★★★★★</span>
-            </div>
-            <span class="review-product">깃털 낚시대</span>
-          </div>
-          <p class="review-text">"고양이가 완전 미쳐서 놀아요 ㅋㅋㅋ 내구성도 좋고 깃털이 튼튼하게 붙어있어서 걱정없이 사용 중이에요. 배송도 엄청 빠르게 왔어요!"</p>
-          <div class="review-images">
-            <div class="review-img" style="background:#F3E5F5;">🐈</div>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="review-header">
-            <div class="reviewer-avatar">👨</div>
-            <div>
-              <p class="reviewer-name">박*준</p>
-              <span class="stars small">★★★★☆</span>
-            </div>
-            <span class="review-product">메모리폼 침대</span>
-          </div>
-          <p class="review-text">"품질이 사진이랑 똑같고 생각보다 훨씬 푹신해서 만족해요. 우리 강아지가 하루종일 침대에서 안 나오네요. 사이즈 고민하시면 한 사이즈 업 추천드려요!"</p>
-          <div class="review-images">
-            <div class="review-img" style="background:#E8F5E9;">🛏️</div>
-            <div class="review-img" style="background:#E8F5E9;">🐕</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 서비스 특징 -->
-  <section class="features-section">
-    <div class="container features-grid">
-      <div class="feature">
-        <div class="feature-icon">🚚</div>
-        <h4>무료 배송</h4>
-        <p>3만원 이상 구매 시<br>전국 무료 배송</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">🔄</div>
-        <h4>무료 반품</h4>
-        <p>구매 후 30일 이내<br>무료 반품 가능</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">✅</div>
-        <h4>정품 보장</h4>
-        <p>공식 입점 브랜드<br>100% 정품 보장</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">💬</div>
-        <h4>1:1 상담</h4>
-        <p>전문 수의사 연계<br>구매 전 무료 상담</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 뉴스레터 -->
+  <!-- ë´ì¤ë í° -->
   <section class="newsletter-section">
-    <div class="container newsletter-inner">
-      <div class="newsletter-text">
-        <h2>할인 소식 놓치지 마세요!</h2>
-        <p>이메일 구독 시 첫 주문 5% 추가 할인 쿠폰을 드려요.</p>
+    <div class="container">
+      <div class="newsletter-inner">
+        <div class="newsletter-text">
+          <h2>ë°ì¹­ ìì ê°ì¥ ë¨¼ì </h2>
+          <p>êµ¬ë ì ì²« ì£¼ë¬¸ 5% ì¶ê° í ì¸ ì¿ í° ì¦ì ì§ê¸.</p>
+        </div>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="ì´ë©ì¼ ì£¼ìë¥¼ ìë ¥í´ì£¼ì¸ì" />
+          <button type="submit" class="newsletter-submit">ìë¦¼ ì ì²­</button>
+        </form>
       </div>
-      <form class="newsletter-form" onsubmit="return false;">
-        <input type="email" placeholder="이메일 주소를 입력해주세요" />
-        <button type="submit" class="btn-primary">구독하기</button>
-      </form>
     </div>
   </section>
 
-  <!-- 푸터 -->
+  <!-- â« í¸í° -->
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a href="#" class="logo">
-          <span class="logo-icon">🐾</span>
-          <span class="logo-text">포우즈</span>
+        <a href="#" class="logo" style="margin-bottom:16px;">
+          <span class="logo-en" style="color:#fff;">hanip</span>
+          <span class="logo-kr">íì Â· ê¸°ë¥ì± í´ë¦° ê°ì</span>
         </a>
-        <p>반려동물과 함께하는 행복한 일상,<br>포우즈가 함께합니다.</p>
-        <div class="social-links">
-          <a href="#" class="social-btn">📘</a>
-          <a href="#" class="social-btn">📸</a>
-          <a href="#" class="social-btn">🐦</a>
+        <p>
+          ë§ìê² ë¨¹ê³ , ê±´ê°íê² ì±ê¸°ë.<br>
+          ë°ë ¤ëë¬¼ê³¼ ë³´í¸ìê° í¨ê»<br>ë ë¿ë¯í ì¼ìì ë§ë­ëë¤.
+        </p>
+        <div class="footer-social">
+          <a href="#">ð¸</a>
+          <a href="#">ð¬</a>
+          <a href="#">ð</a>
         </div>
       </div>
       <div class="footer-links">
         <div class="footer-col">
-          <h5>쇼핑</h5>
-          <a href="#">강아지 용품</a>
-          <a href="#">고양이 용품</a>
-          <a href="#">사료·간식</a>
-          <a href="#">건강·위생</a>
-          <a href="#">이동·외출</a>
+          <h5>PRODUCT</h5>
+          <a href="#">íì ì¡°ì¸í¸</a>
+          <a href="#">íì ì¤í¨ì½í¸ (ìì )</a>
+          <a href="#">íì ê±°í¸ (ìì )</a>
+          <a href="#">íì ì¹´ë° (ìì )</a>
+          <a href="#">íì ìëì´ (ìì )</a>
         </div>
         <div class="footer-col">
-          <h5>고객센터</h5>
-          <a href="#">자주 묻는 질문</a>
-          <a href="#">배송 안내</a>
-          <a href="#">반품·교환</a>
-          <a href="#">1:1 문의</a>
+          <h5>BRAND</h5>
+          <a href="#">ë¸ëë ì¤í ë¦¬</a>
+          <a href="#">ì±ë¶ ì² í</a>
+          <a href="#">êµ¬ë ìë´</a>
+          <a href="#">ì í´Â·ìì  ë¬¸ì</a>
         </div>
         <div class="footer-col">
-          <h5>회사</h5>
-          <a href="#">회사 소개</a>
-          <a href="#">입점 문의</a>
-          <a href="#">이용약관</a>
-          <a href="#">개인정보처리방침</a>
+          <h5>SUPPORT</h5>
+          <a href="#">ìì£¼ ë¬»ë ì§ë¬¸</a>
+          <a href="#">ë°°ì¡ ìë´</a>
+          <a href="#">ë°íÂ·êµí</a>
+          <a href="#">1:1 ë¬¸ì</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <p>© 2026 포우즈. All rights reserved. | 사업자등록번호: 123-45-67890 | 통신판매업신고: 2026-서울-0001</p>
+        <p>Â© 2026 HANIP(íì). All rights reserved. | ê¸°ë¥ì± í´ë¦° ê°ì D2C ë¸ëë</p>
       </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- íë¡í ë¬¸ì ë²í¼ -->
+  <button class="fab-contact" id="fabContact" aria-label="ë¬¸ìíê¸°">ë¬¸ìíê¸°</button>
+
+  <!-- ë¬¸ì ëª¨ë¬ -->
+  <div class="modal-overlay" id="contactOverlay" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
+    <div class="modal-box" id="contactBox">
+      <button class="modal-close" id="contactClose" aria-label="ë«ê¸°">â</button>
+
+      <h2 class="modal-title" id="contactTitle">ë¬¸ìíê¸°</h2>
+      <p class="modal-desc">ê¶ê¸í ì ì ë¨ê²¨ì£¼ìë©´ ë¹ ë¥´ê² ëµë³ëë¦´ê²ì.</p>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="contactName">ì´ë¦</label>
+          <input type="text" id="contactName" placeholder="íê¸¸ë" required />
+        </div>
+        <div class="form-group">
+          <label for="contactEmail">ì´ë©ì¼</label>
+          <input type="email" id="contactEmail" placeholder="hello@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="contactType">ë¬¸ì ì í</label>
+          <select id="contactType" required>
+            <option value="" disabled selected>ì íí´ì£¼ì¸ì</option>
+            <option value="product">ì í ë¬¸ì</option>
+            <option value="subscribe">êµ¬ë ë¬¸ì</option>
+            <option value="purchase">êµ¬ë§¤ ë¬¸ì</option>
+            <option value="other">ê¸°í</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="contactMessage">ë¬¸ì ë´ì©</label>
+          <textarea id="contactMessage" rows="4" placeholder="ìì ë¡­ê² ìì±í´ì£¼ì¸ì." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg contact-submit">ë³´ë´ê¸°</button>
+      </form>
+
+      <div class="contact-success" id="contactSuccess" hidden>
+        <div class="success-icon">â</div>
+        <h3>ë¬¸ìê° ì ìëìì´ì</h3>
+        <p>íì¸ í ë¹ ë¥´ê² ëµë³ëë¦´ê²ì.</p>
+        <button class="btn btn-outline btn-md" id="contactSuccessClose">ë«ê¸°</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script-v4.js"></script>
 </body>
 </html>
